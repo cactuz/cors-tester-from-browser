@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>CORS Tester</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+  <H2>To view test result</H2>
+  <h3>Right click this page > Inspect Element > Console </h3>
+
+  <script>
+  console.log("starting ajax request to the resource.");
+  $.ajax
+      ({
+      dataType: "html",           //edit datatype: json, html, etc.
+      url: "http://google.com",   //edit host and port, example: http://198.0.1.20:8443/path
+    //  headers: {                  //add any headers here
+    //  "header field1":"test",
+    //  "header field2":"test"
+    //},
+      success: function(data)
+    {
+      console.log("API is CORS enabled, here's the result");
+      console.log(data);
+    }
+    });
+  console.log("ajax request done.");
+  </script>
+</body>
+</html>
+
