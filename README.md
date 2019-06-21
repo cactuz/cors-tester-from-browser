@@ -28,6 +28,6 @@ Cross-origin redirection to http://www.google.com/ denied by Cross-Origin Resour
 
 3) _(optional) If you don't see anything_, the jquery library may not have loaded fast enough . If so, please download query locally and refer to it by editing the head  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
-__Acknowledgments__ . 
+__Acknowledgments__   
 Thanks to Nick Gibbon for the original material.
 https://medium.com/pareture/simple-local-cors-test-tool-544f108311c5
