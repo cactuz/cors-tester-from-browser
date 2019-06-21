@@ -10,7 +10,7 @@ Download the html file and edit the html file using any text editor.
 Edit the script in the html body, guides are provided:
       dataType: "html",           //edit datatype: json, html, etc.
       url: "http://google.com",   //edit host and port, example: http://198.0.1.20:8443/path
-      headers: {   
+      headers: {   }              //add headers  
 
 __Running the test__
 
