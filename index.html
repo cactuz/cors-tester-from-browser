@@ -9,24 +9,31 @@
 <body>
   <H2>To view test result</H2>
   <h3>Right click this page > Inspect Element > Console </h3>
+  <p id="out"></p>
 
   <script>
   console.log("starting ajax request to the resource.");
   $.ajax
-      ({
-      dataType: "html",           //edit datatype: json, html, etc.
-      url: "http://google.com",   //edit host and port, example: http://198.0.1.20:8443/path
-    //  headers: {                  //add any headers here
-    //  "header field1":"test",
-    //  "header field2":"test"
-    //},
+      ({type: "GET",                     //edit method
+          contentType: "json",           //edit datatype: json, html, etc.dataType: "json",
+          url: "https://www.google.com", //edit host and port, example: http://198.0.1.20:8443/pat
+        headers: {                       //add any headers here
+          "X-AMEX-API-KEY":"test",
+          "Authorization":"test",},
+          xhrFields: {                   //optional
+                withCredentials: true
+            },
       success: function(data)
-    {
-      console.log("API is CORS enabled, here's the result");
-      console.log(data);
-    }
+      {
+        console.log("API is CORS enabled, here's the result");
+        console.log(data);
+        $('#out').text(JSON.stringify(data));
+      },
+          done: function( jqXHR, textStatus ) {
+          console.log( "Request failed: " + textStatus + jqXHR );
+      },
     });
-  console.log("ajax request done.");
+  console.log("ajax request sent.");
   </script>
 </body>
 </html>
