@@ -23,7 +23,8 @@ request will only receive null in the request origin resulting in CORS rejection
     ```$ npm install connect serve-static```
 
     1.2) Create server.js file with this content:
-    ```var connect = require('connect');
+    ```
+	   var connect = require('connect');
        var serveStatic = require('serve-static');
        connect().use(serveStatic(__dirname)).listen(8080, function(){
            console.log('Server running on 8080...');
